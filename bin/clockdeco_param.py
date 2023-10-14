@@ -16,8 +16,20 @@ def clock(fmt=DEFAULT_FMT):
         return clocked  
     return decorate  
 
+@clock()
+def snooze5111(seconds):
+    time.sleep(seconds)
+    return str(seconds)
+
+
+#print("Hello this is the line BEFORE __main__")
+
+
 if __name__ == '__main__':
 
+
+#    print("Hello this is the line AFTER __main__")
+    
     @clock()  
     def snooze(seconds):
         time.sleep(seconds)

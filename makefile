@@ -11,7 +11,7 @@ env/touchfile: requirements.txt
 run: env
 	@. env/bin/activate; python bin/clockdeco_param.py
 
-.PHONY: tests
+.PHONY: tests run
 
 tests:
 	pytest -vv tests
