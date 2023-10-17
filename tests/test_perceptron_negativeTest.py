@@ -1,13 +1,15 @@
+import pytest
 import sys
 sys.path.append(".")
 
 from bin.perceptron import Perceptron
 
-def test_perceptron():
+@pytest.mark.xfail(reason="XPASS demo")
+def test_perceptron_negative():
     the_perceptron = Perceptron()
 
     trainSet = [[1,1],[1,0],[0,1],[0,0]]
-    labels = [1,1,1,0]
+    labels = [0,1,1,0]
     
     the_perceptron.train(trainSet, labels)
 

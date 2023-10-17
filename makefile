@@ -14,7 +14,7 @@ run: env
 .PHONY: tests run lint
 
 tests:
-	pytest -vv tests
+	pytest -rP -vv tests
 
 lint: env
 	pylint bin/perceptron.py 
