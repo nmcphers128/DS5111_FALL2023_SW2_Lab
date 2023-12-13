@@ -11,10 +11,13 @@ env/touchfile: requirements.txt
 run: env
 	@. env/bin/activate; python bin/clockdeco_param.py
 
-.PHONY: tests
+.PHONY: tests run lint
 
 tests:
-	pytest -vv tests
+	pytest -rP -vv tests
+
+lint: env
+	pylint bin/perceptron.py 
 
 
 clean:

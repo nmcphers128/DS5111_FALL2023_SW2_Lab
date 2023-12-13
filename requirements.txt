@@ -1,2 +1,2 @@
-pytest
-pylint
+pylint==2.12.2
+pytest==7.4.2
